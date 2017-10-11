@@ -1,0 +1,13 @@
+<h1>Activate an account</h1>
+<big><p>Please select a base playlist to activate:</p></big>
+{% for playlist in playlists %}
+    <p>{{playlist}}</p>
+{% endfor %}
+
+
+
+<p>
+{% for number in numbers %}
+    <a href="?number={{number}}">{{number}}</a>
+{% endfor %}
+</p>

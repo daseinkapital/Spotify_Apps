@@ -1,0 +1,30 @@
+{% load static %}
+<header>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</header>
+
+<body>
+    <div id="fullscreen_bg" class="fullscreen_bg"/>
+    
+    <div class="container">
+            
+        <form class="form-signin" method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <h1 class="form-signin-heading text-muted">Sign In</h1>
+            <table>
+                    <tr>
+                        <td>{{ form.username.label_tag }}</td>
+                        <td class="form-control">{{ form.username }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form.password.label_tag }}</td>
+                        <td class="form-control">{{ form.password }}</td>
+                    </tr>
+                    </table>
+                    
+                    <input type="submit" value="login" />
+            <input type="hidden" name="next" value="{{ next }}" />
+        </form>
+    
+    </div>
+</body>
