@@ -7,7 +7,6 @@ import math
 #spotipy imports
 import spotipy
 import spotipy.util as util
-from spotipy.oauth2 import SpotifyClientCredentials
 
 # Create your views here.
 def main(request):
@@ -42,9 +41,13 @@ def activate(request):
         if (total_playlists-offset) < 50:
             context.update({'next_hidden':True})
         for item in results['items']:
-            playlist_name = item['name']
-            playlist_id = item['id']
-            playlists.append(playlist_name + ' - ' + playlist_id)
+            name = item['name']
+            eyed = item['id']
+            if len(item['images']) != 0:
+                image = item['images'][0]['url']
+            else:
+                image = "https://www.turntablekitchen.com/_uploads/Speaker-VSCO-image-640x640.jpg"
+            playlists.append({'name': name, 'eyed': eyed, 'image':image})
         context.update({'playlists':playlists})
         return render(request, 'PartyPlaylist/activate.html', context)
     else:
