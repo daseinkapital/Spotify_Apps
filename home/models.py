@@ -17,3 +17,5 @@ class App(models.Model):
         verbose_name = "Apps"
 
         verbose_name_plural = "Apps"
+
+        ordering = ['name']

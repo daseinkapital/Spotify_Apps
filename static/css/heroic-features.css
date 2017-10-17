@@ -17,3 +17,11 @@ body {
 .card {
     height: 100%;
 }
+
+.background {
+    background: linear-gradient(100deg, #84bd00,  #828282)
+}
+
+.spotify-lite-grey {
+    background-color: #ecebe8
+}

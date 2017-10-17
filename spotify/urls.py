@@ -11,5 +11,13 @@ urlpatterns = [
     url(r'^', include('home.urls')),
     url(r'party/', include('PartyPlaylist.urls')),
     url(r'accounts/login/', login, name='login'),
-    url(r'carpool/', views.coming_soon)
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    url(r'carpool/', views.coming_soon),
+    url(r'cleanup/', views.coming_soon),
+    url(r'topcharts/', views.coming_soon),
+    url(r'timer/', views.coming_soon),
+    url(r'visualizer/', views.coming_soon)
+
+] 
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
