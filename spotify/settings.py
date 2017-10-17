@@ -121,9 +121,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 #set the static root path
+STATIC_ROOT = '/static/'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     #This lets Django's collectstatic store our bundles
     os.path.join(BASE_DIR, 'static'), 
+    BASE_DIR
 )
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'home/media')
+
+MEDIA_URL = '/media/'

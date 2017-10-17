@@ -1,0 +1,54 @@
+{% load static %}
+
+{% include 'home/header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Coming soon!</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Notify Under Construction and Coming Soon Template"/>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/notify_reset.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/notify_main.css' %}">
+
+    <script type="text/javascript" src="{% static 'js/notify_jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/notify_TimeCircles.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/notify_backstretch.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/notify_main.js' %}"></script>
+</head>
+<body>
+
+	<section class="content wrapper">
+
+		<h1>We're Under Construction Here</h1>
+		<p class="description">This application isn't quite complete yet, but we're working on it!</p>
+
+		<a></a>
+
+		<!--
+		<div class="subscription_form clearfix">
+			<div>
+				<form action="#" method="post">
+					<input type="email" id="mc-email" placeholder="enter your email">
+					<button type="submit"><i class="icon"></i></button>
+				</form>
+			</div>
+		</div>
+		-->
+		<!--<div class="counter clear" data-date="2018-07-01 00:00:00"></div>-->
+
+	</section>
+	<script type="text/javascript">
+		
+	//code for the background slider
+	$.backstretch([
+      "{% static 'img/bg_img.jpg' %}",
+      "{% static 'img/bg_img2.jpg' %}",
+      "{% static 'img/bg_img3.jpg' %}"
+    ], {
+        fade: 750,
+        duration: 2500
+    });
+	</script>
+</body>
+</html>
